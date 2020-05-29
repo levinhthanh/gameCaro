@@ -19,7 +19,7 @@ for (let i = 0; i < 20; i++) {
 for (let i = 0; i < 20; i++) {
     banco += '<div id="row">';
     for (let j = 0; j < 20; j++) {
-        banco += '<div class="oco"><img id="r' + i + 'c' + j + '" src="user0.png" onclick="put(' + i + ',' + j + ')"></div>'
+        banco += '<div class="oco"><img id="r' + i + 'c' + j + '" src="images/user0.png" onclick="put(' + i + ',' + j + ')"></div>'
     }
     banco += '</div>';
 }
@@ -34,14 +34,14 @@ let win;
 function put(i, j) {
     Id = 'r' + i + 'c' + j;
     if (step % 2 === 0) {
-        document.getElementById(Id).src = "user1.png";
+        document.getElementById(Id).src = "images/user1.png";
         valueGame[i][j] = 1;
         win = checkWin();
         if(win) alert(player1 +' chiến thắng!')
     }
 
     else {
-        document.getElementById(Id).src = "user2.png";
+        document.getElementById(Id).src = "images/user2.png";
         valueGame[i][j] = 2;
         win = checkWin();
         if(win) alert(player2 +' chiến thắng!')
